@@ -8,9 +8,9 @@ def predict(prompt):
 
     return summary
 
-with gr.Blocks() as demo:
+with gr.Blocks() as hf_demo:
     textbox = gr.Textbox(placeholder="Enter text block to summarize", lines=4)
     gr.Interface(fn=predict, inputs=textbox, outputs="text")
 
 
-demo.launch()
+hf_demo.launch()
